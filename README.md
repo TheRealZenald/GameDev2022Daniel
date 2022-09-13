@@ -1,2 +1,1 @@
-# GameDev2022Daniel
-For Game Dev class Period 2
+https://therealzenald.github.io/gamedev2022daniel/public/
