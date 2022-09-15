@@ -8,6 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  
 body {
 background-color:#555555
@@ -17,6 +18,28 @@ background-color:#555555
 </head>
 <body>
  <h2 align=center>Links To my Projects</h2>
+ 
+ <div class="w3-container">
+  <div class="w3-dropdown-click">
+    <button onclick="myFunction()" class="w3-button w3-black">Click Me!</button>
+    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="https://github.com/TheRealZenald/gamedev2022daniel" class="w3-bar-item w3-button">GitHub</a>
+      <a href="https://therealzenald.github.io/gamedev2022daniel/public/t1a01%20basic-web-daniel.html" class="w3-bar-item w3-button">T1A01</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
   <a href="https://github.com/TheRealZenald/gamedev2022daniel">My Github</a>
   <a href="https://therealzenald.github.io/gamedev2022daniel/public/t1a01%20basic-web-daniel.html">T1A01</a>
