@@ -8,6 +8,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+ .card {
+        width: 130px;
+        height: 195px;
+        position: relative;
+        display: inline-block;
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .card:hover .img-top {
+     display: inline;}
+ 
  a{
   font-size: 30px;}
  
@@ -25,6 +41,10 @@ background-color:#555555
   <a href="https://therealzenald.github.io/gamedev2022daniel/public/t1a02-tables-daniel.html">T1A02 List And Tables</a> <br>
  <a href="https://therealzenald.github.io/gamedev2022daniel/public/t1a03-forms-daniel.html">T1A03 Forms</a> <br>
  <img src="https://avatars.githubusercontent.com/u/5605614?v=4">
+ <div class="card">
+        <img src="https://avatars.githubusercontent.com/u/5605614?v=4" alt="Card Back">
+        <img src="images/card-front.jpg" class="img-top" alt="Card Front">
+    </div>
 
 </body>
 </html>
