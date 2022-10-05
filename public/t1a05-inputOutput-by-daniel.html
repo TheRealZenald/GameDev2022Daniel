@@ -13,10 +13,13 @@ let myIn01 = document.getElementById('myNum01').value document.getElementById('m
 
 <input id="myNum01" type=number value="4" ><br>
 
-<input type=button value="myEvent squares" onclick="{
-  let myin01 = parseFloat(document.getElementById('myNum01').value)
-                                                    let myAnswer = myIn01 * myIn01
-                                                    document.getElementById('myDiv01').innterhtml = myIn01 + 'squared = ' + myAnswer 
- }"><br>
+<tr>
+    <td> <input type=button value="myEvent squares" onClick="{
+let myIn01 =  parseFloat(document.getElementById('myNum01').value)
+let myAnswer = myIn01 * myIn01
+document.getElementById('myDiv01').innerHTML =
+myIn01 + ' squared = ' + myAnswer
+}"> <br> </td>
+
 
 <div id="myDiv01">...</div>
