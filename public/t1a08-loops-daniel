@@ -1,0 +1,24 @@
+<h2 align=center>t1a08-loops-by-Daniel</h2>
+
+<a href="https://www.w3schools.com/js/js_loop_for.asp">good ref for loops baby</a><br>
+
+<h4> Example input output code </h4>
+
+Max loops: <input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="Basic For loop with Decisions" onclick="{
+document.getElementById('myDiv01').innerHTML =''
+let myMax = parseInt(document.getElementById('myNum01').value)
+
+for(let myLoop=0; myLoop < myMax; myLoop++ ){
+if (myLoop * 2 > myMax){
+myTemp += 'cool'
+}
+myTemp += 'Loop number: ' + myLoop + ' <br> '
+}
+document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+<div id="myDiv01">
+...
+</div>
