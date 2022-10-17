@@ -1,7 +1,94 @@
-<h1 align=center>t1a03-Forms-Daniel.html</h1>
-<font color=blue> Prove you can use: Forms</font>
+<h1 align= center>t1a03-froms-daniel.html</h1>
+<font color=pink> Prove you can use: Forms</font>
 
-The follow are all form elements (add to them):<br>
-<form>
-  Enter Your First Name:<input type=text id="myText01" value="Daniel"><br>
-</form>
+The following are all form elements (add to them):<br>
+<Form>
+  <br>
+  
+  How smart are you?
+  <div class="slider">
+<input type="range" min="-9000" max="9000" value="100" oninput="rangeValue.innerText = this.value">
+<p id="rangeValue">0</p>
+</div>
+  
+  Enter Your First Name:<input type=text id="myText01"value="Joe"><br>
+  Checkbox: <br>
+  Time:<input type=checkbox><br>
+  Money: <input type=checkbox><br>
+  Radio Buttons:<br>
+   42.0<input type=radio name="myRad01" value=""><br>
+   91.1 <input type=radio name="myRad01" value=""><br>
+  
+  File:<input type=file><br>
+  reset:<input type =reset><br>
+  Submit (advanced)<input type=submit><br>
+  
+  Button: <input type=button value="click" onclick="{
+    document.getElementById('myArea01').value = 'Cool'
+    }"><br>
+  Textarea:<br>
+  <textarea id="myArea01" cols=60 rows=5 > among us </textarea><br>
+  
+  Select Bos:<BR>
+  <select id="mySelect01" size=2>
+    <option value='myOne'>One
+      <option value='myTwo'>Two
+        <option value='myThree'>Three
+  </select>
+  </form>
+  
+  <br> 
+  <br>
+  
+
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
+  
+  
+  
+  </style> 
+
+</body>
