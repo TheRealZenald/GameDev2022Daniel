@@ -1,86 +1,104 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-  
-  input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+ <a href="https://www.w3schools.com/css/"> w3schools
+</a>
+
+
+<br>
+<br> 
+
+Document style: 
+<pre> 
+b {
+color: #00ff00;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+</pre> <br> 
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+This is css inside of a tag yeah 
 
-  
-  .fat {
-    
-    border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-    
-  }
-  
-  h1 {
-  text-shadow: 2px 2px 5px red;
-}
-  
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 4s;
-}
+<b> this is bold </b>
+<br>
+<br> 
+<b id=bold01> this is also bold, but cooler. </b>
+<br> 
 
-@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-}
-</style>
-</head>
-<body>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<input type="button" value=Change onClick="{
+document.getElementById('bold01').style.color = 'yellow' 
+document.getElementById('bold01').style.backgroundColor = 'red' 
+}"> 
+<input type="button" value="Reset color" onClick="{
+document.getElementById('bold01').style.backgroundColor = 'blue' 
+document.getElementById('bold01').style.color = 'gray'
+}">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  
-  </form>
+<br>
+<br>
 
-<h1>CSS Animation</h1>
 
-<div></div>
+<input type="button" value="change background color" onClick="{
+document.getElementById('mainBody').style.backgroundColor = 'blue' 
+}">
 
-<p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+<br>
+
+
+
+
+<br>
+
+<input type="button" value="reset background color" onClick="{
+document.getElementById('mainBody').style.backgroundColor = 'gray' 
+}">
+
+
+
+
+
+
+
+<br>
+
+<textarea class="textarea"> Give me you adress now </textarea>
+
 
 </body>
-</html>
+
+
+
+<style>
+
+
+body {
+  background-color: gray;
+}
+
+.textarea {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 200;
+  height: 50;
+  border: 2px solid gray;
+}
+
+
+h1 {
+  text-align: center;
+  
+}
+
+
+#bold01 {
+  color: blue;
+  background-color: gray;
+  
+  
+}
+
+
+
+
+
+
+
+</style>
