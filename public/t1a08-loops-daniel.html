@@ -26,3 +26,21 @@ Max Loops: <input id="myNum01" type=number value="4"> <br>
 }">
 
 <div id="myDiv01">...</div>
+
+
+
+How Many Times Should Wiggles Shut Up <input type="number" id="myTextLoop" value="10" size="10"> 
+    
+<input id="myButton125" type="button" value="For Loop" onclick="{
+                                                               
+    document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV  
+                                                               
+    for (myLoop = 0;  myLoop <= document.getElementById('myTextLoop').value;    myLoop++){   
+                                                               
+       document.getElementById('myDiv125').innerHTML += 'Shut Up Wiggles #'+ myLoop+'<br>'  
+                                                               
+    }
+                                                               
+}"><br><br>
+
+<div id='myDiv125'>...</div><br>
