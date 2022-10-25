@@ -22,7 +22,21 @@ myIn01 + ' squared = ' + myAnswer
 }"> <br> </td>
 
 
-<div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
+    
+    <input id="myNum02" type=number value="5" ><br>
+
+<tr>
+    <td> <input type=button value="myEvent squares" onClick="{
+let myIn02 =  parseFloat(document.getElementById('myNum02').value)
+let myAnswer = myIn02 * myIn02
+document.getElementById('myDiv01').innerHTML =
+myIn01 * ' times = ' * myAnswer
+}"> <br> </td>
+
+
+<div id="myDiv02">...</div>
+    
     
     <style>
 
