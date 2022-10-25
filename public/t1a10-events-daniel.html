@@ -27,6 +27,36 @@
      document.getElementById("myDiv03").innerHTML = document.getElementById("myText03").value
     }
     </script>
+       <script>
+    function onChangeFunc() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("myP01").innerHTML = "You selected: " + x;
+}
+</script>
+   <script>
+    function onBlurFunc() {
+    var y = document.getElementById("myText04");
+    y.value = y.value.toUpperCase();
+    }
+    </script>
+    <script>
+    function onFocusFunc() {
+    var z = document.getElementById("myText04");
+    z.value = z.value.toLowerCase();
+    }
+    </script>
+    <script>
+    function onMouseMoveFunc(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    var coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("myP02").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("myP02").innerHTML = "";
+}
+</script>
   </head>
  
   <body>
