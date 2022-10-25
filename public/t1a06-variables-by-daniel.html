@@ -18,13 +18,14 @@ docuemtn.getElemmentById('myDiv01').innerHTML = myIn01
 <h1>Letters only i think</h1>
 <input id="myText01" type=text value="The Dog"><br>
 
-<input type=button value="Show Variable" onclick="{
-  document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+<input type=button value="Show Variable" onclick="{ let myIn01 = document.getElementById('myText01').value 
+  document.getElementById('myDiv01').innerHTML = myIn01
 }"><br>
 
 <input type=button value="Using no variable" onclick="{
   let myIn01 = document.getElementById('myText01').value 
   document.getElementById('myDiv01').innerHTML = myIn01
+                                                        document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
   
 }"><br>
 
