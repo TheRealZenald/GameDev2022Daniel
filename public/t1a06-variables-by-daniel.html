@@ -25,7 +25,20 @@ docuemtn.getElemmentById('myDiv01').innerHTML = myIn01
   
 }"><br>
 
-<div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
+
+<input id="myNumber01" type=number value="6"><br>
+
+<input type=button value="Show Variable" onclick="{
+  document.getElementById('myDiv02').innerHTML = document.getElementById('myNumber01').value
+}"><br>
+
+<input type=button value="Using no variable" onclick="{
+  let myIn002 = document.getElementById('myNumber01').valuedocument.getElementById('myDiv02').innerHTML = myIn02
+  
+}"><br>
+
+<div id="myDiv02">...</div>
 
 <style>
 
