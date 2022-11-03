@@ -114,6 +114,20 @@ function clearCoor() {
    onMouseMove: <br> 
    <div id="myDiv04" onmousemove="onMouseMoveFunc(event)" onmouseout="clearCoor()"></div>
    <p id="myP02"></p>
+   
+   <script>
+    // get the mouse position on the page and display it on the page as a div element with id="mousepos"
+    document.onmousemove = function(e) {
+        var x = e.pageX;
+        var y = e.pageY;
+        var mousepos = document.getElementById("mousepos");
+        mousepos.style.left = x + "px";
+        mousepos.style.top = y + "px";
+        mousepos.innerHTML = "x: " + x + " y: " + y;
+    }
+
+</script>
+<div id="mousepos" style="position: absolute; z-index: 1000; background-color: #000; color: #fff; padding: 5px;"></div>
  </body>
  
 </html>
