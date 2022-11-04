@@ -45,6 +45,22 @@ myIn01 + ' squared = ' + myAnswer
    
    </div>
     
+    <form>
+        <input type="text" id="input" placeholder="Enter your name">
+        <button type="button" onclick="myFunction()">Submit</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("input").value;
+            if (x == "Ellis") {
+                document.getElementById("output").innerHTML = "You are very smart Mr Ellis";
+            } else {
+                document.getElementById("output").innerHTML = "Your not awsome " + x;
+            }
+        }
+    </script>
+    
     
     <style>
 
