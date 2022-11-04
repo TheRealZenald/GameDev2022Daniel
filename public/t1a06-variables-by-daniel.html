@@ -46,6 +46,34 @@ docuemtn.getElemmentById('myDiv01').innerHTML = myIn01
 
 <div id="myDiv02">...</div>
 
+<script>
+ var inputField = false;
+        var button = false;
+        function toggleInput() {
+            if (inputField == false) {
+                document.getElementById("input").style.display = "block";
+                inputField = true;
+            } else {
+                document.getElementById("input").style.display = "none";
+                inputField = false;
+            }
+        }
+
+        function toggleButton() {
+            if (button == false) {
+                document.getElementById("button").style.display = "block";
+                button = true;
+            } else {
+                document.getElementById("button").style.display = "none";
+                button = false;
+            }
+        }
+    </script>
+    <button onclick="toggleInput()">Toggle Input</button>
+    <button onclick="toggleButton()">Toggle Button</button>
+    <input type="text" id="input" style="display: none;">
+    <button id="button" style="display: none;">Button</button>
+
 <style>
 
 
