@@ -74,6 +74,66 @@ docuemtn.getElemmentById('myDiv01').innerHTML = myIn01
     <input type="text" id="input" style="display: none;">
     <button id="button" style="display: none;">Button</button>
 
+<script>
+// variable tree that contains objects and prints it on the web page
+var tree = {
+    "name": "root",
+    "children": [
+        {
+            "name": "child1",
+            "children": [
+                {
+                    "name": "child1.1",
+                    "children": [
+                        {
+                            "name": "child1.1.1",
+                            "children": []
+                        },
+                        {
+                            "name": "child1.1.2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "child1.2",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "child2",
+            "children": [
+                {
+                    "name": "child2.1",
+                    "children": []
+                },
+                {
+                    "name": "child2.2",
+                    "children": []
+                }
+            ]
+        }
+    ]
+};
+
+// function that prints the tree on the web page
+function printTree(tree) {
+    var html = "";
+    html += "<ul>";
+    html += "<li>" + tree.name;
+    if (tree.children.length > 0) {
+        html += printTree(tree.children[0]);
+    }
+    html += "</li>";
+    html += "</ul>";
+    return html;
+}
+
+// call the function
+document.write(printTree(tree));
+</script>
+
 <style>
 
 
