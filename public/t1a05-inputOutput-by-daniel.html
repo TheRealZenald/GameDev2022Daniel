@@ -59,7 +59,20 @@ myIn01 + ' squared = ' + myAnswer
                 document.getElementById("output").innerHTML = "Your not awsome " + x;
             }
         }
+        TYPE HERE
     </script>
+    
+    function inputOutput() {
+  var input = document.getElementById("input").value;
+  var output = document.getElementById("output");
+  output.innerHTML = input;
+}
+
+</script>
+<div>
+  <input type="text" id="input" onkeyup="inputOutput()">
+  <div id="output"></div>
+</div>
     
     
     <style>
