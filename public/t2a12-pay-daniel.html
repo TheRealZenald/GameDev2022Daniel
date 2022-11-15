@@ -1,9 +1,31 @@
- <td> <input type=button value="myEvent squares" onClick="{
-let myIn01 =  parseFloat(document.getElementById('myNum01').value)
-let myAnswer = myIn01 * myIn01
-document.getElementById('myDiv01').innerHTML =
-myIn01 + ' squared = ' + myAnswer
-}"> <br> </td>
+ <script>
+    // code to calulate you pay based on hours worked and pay rate and tax rate wusing text boxes
 
+    // get the values from the text boxes
+    var hours = document.getElementById("hours").value;
+    var payRate = document.getElementById("payRate").value;
+    var taxRate = document.getElementById("taxRate").value;
+    
+    // calculate the gross pay
+    var grossPay = hours * payRate;
 
-<div class="calculator-text">
+    // calculate the tax
+    var tax = grossPay * taxRate;
+
+    // calculate the net pay
+    var netPay = grossPay - tax;
+
+    // display the results
+    document.getElementById("grossPay").value = grossPay;
+    document.getElementById("tax").value = tax;
+    document.getElementById("netPay").value = netPay;
+</script>
+<input type="text" id="hours" placeholder="Hours"> <br>
+<input type="text" id="payRate" placeholder="Pay Rate"> <br>
+<input type="text" id="taxRate" placeholder="Tax Rate"> <br>
+<input type="text" id="grossPay" placeholder="Gross Pay"> <br>
+<input type="text" id="tax" placeholder="Tax"> <br>
+<input type="text" id="netPay" placeholder="Net Pay"> <br>
+
+<button onclick="calculatePay()">Calculate Pay</button> <br>
+<div id="output"></div>
