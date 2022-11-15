@@ -2,6 +2,8 @@
 <html>
 <head>
     <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+    
+    <button onclick="encode()">Encypt Base64</button>
 
 
     <input type=button value="encrypt" onclick="{
@@ -51,17 +53,17 @@
     <button onclick="decode()">Decyrpt</button>
     <script>
         function encode() {
-            var text = document.getElementById("base64").value;
+            var text = document.getElementById("myArea01").value;
             var base64 = btoa(text);
-            document.getElementById("base64").value = base64;
+            document.getElementById("myArea02").value = base64;
         }
         function decode() {
             // get the base64 encoded text
-            var base64 = document.getElementById("base64").value;
+            var base64 = document.getElementById("myArea02").value;
             // decode the base64 encoded text
             var text = atob(base64);
             // display the decoded text in a div element with id="result"
-            document.getElementById("base64").value = text;
+            document.getElementById("myArea03").value = text;
         }
     </script>
     <div id="result"></div> 
