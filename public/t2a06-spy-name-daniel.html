@@ -21,6 +21,8 @@
     
     <textarea id="myArea02" rows=4 cols=70></textarea><br>
 
+    <button onclick="decode()">Decyrpt base64</button>
+
     <input type=button value="decrypt" onclick="{
        let myTemp = ''
        myString = document.getElementById('myArea02').value.toLowerCase().split('')
@@ -36,7 +38,6 @@
         
     <textarea id="myArea03" rows=4 cols=70></textarea><br> 
     
-    <h1>Encrption done with base64 </h1>
     
     <script>
         // base64 encoded text is in the text box below
@@ -48,9 +49,7 @@
 
     </script>
 
-    <textarea id="base64" rows="10" cols="50"></textarea>
-    <button onclick="encode()">Encypt</button>
-    <button onclick="decode()">Decyrpt</button>
+
     <script>
         function encode() {
             var text = document.getElementById("myArea01").value;
@@ -59,13 +58,13 @@
         }
         function decode() {
             // get the base64 encoded text
-            var base64 = document.getElementById("myArea02").value;
+            var base642 = document.getElementById('myArea02').value
             // decode the base64 encoded text
-            var text = atob(base64);
-            // display the decoded text in a div element with id="result"
-            document.getElementById("myArea03").value = text;
+            var myText = atob(base642);
+            // display the decoded text in myArea03 text area
+            document.getElementById("myArea03").value = myText;
         }
     </script>
-    <div id="result"></div> 
+    <div id="myArea03"></div>
 </head>
 </html>
