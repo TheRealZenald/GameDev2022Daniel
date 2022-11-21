@@ -1,0 +1,123 @@
+<html>
+  <body>
+    <script>
+var cube = document.createElement('div');
+    cube.style.width = '100px';
+    cube.style.height = '100px';
+    cube.style.backgroundColor = 'red';
+    cube.style.position = 'absolute';
+    cube.style.top = '50px';
+    cube.style.left = '50px';
+    document.body.appendChild(cube);
+    // variables to keep track of the cube's position
+    var x = 50;
+    var y = 50;
+    // variables to keep track of the cube's velocity
+    var vx = 0;
+    var vy = 0;
+    // variables to keep track of the cube's acceleration
+    var ax = 0;
+    var ay = 0;
+    // variables to keep track of the cube's rotation
+    var rotation = 0;
+    // variables to keep track of the cube's angular velocity
+    var angularVelocity = 0;
+    // variables to keep track of the cube's angular acceleration
+    var angularAcceleration = 0;
+    // function to update the cube's position
+    function updatePosition() {
+        // update the cube's velocity
+        vx += ax;
+        vy += ay;
+        // update the cube's position
+        x += vx;
+        y += vy;
+        // update the cube's rotation
+        rotation += angularVelocity;
+        // update the cube's angular velocity
+        angularVelocity += angularAcceleration;
+        // update the cube's position on the page
+        cube.style.top = y + 'px';
+        cube.style.left = x + 'px';
+        // update the cube's rotation on the page
+        cube.style.transform = 'rotate(' + rotation + 'deg)';
+    }
+    // function to update the cube's acceleration
+    function updateAcceleration() {
+        // update the cube's acceleration
+        ax = 0;
+        ay = 0;
+        // update the cube's angular acceleration
+        angularAcceleration = 0;
+        // check if the up arrow is pressed
+        if (keys[38]) {
+            // increase the cube's acceleration
+            ay = -0.1;
+        }
+        // check if the down arrow is pressed
+        if (keys[40]) {
+            // increase the cube's acceleration
+            ay = 0.1;
+        }
+        // check if the left arrow is pressed
+        if (keys[37]) {
+            // increase the cube's angular acceleration
+            angularAcceleration = -0.1;
+        }
+        // check if the right arrow is pressed
+        if (keys[39]) {
+            // increase the cube's angular acceleration
+            angularAcceleration = 0.1;
+        }
+    }
+    // function to update the cube's acceleration
+    function updateAcceleration() {
+        // update the cube's acceleration
+        ax = 0;
+        ay = 0;
+        // update the cube's angular acceleration
+        angularAcceleration = 0;
+        // check if the up arrow is pressed
+        if (keys[38]) {
+            // increase the cube's acceleration
+            ay = -0.1;
+        }
+        // check if the down arrow is pressed
+        if (keys[40]) {
+            // increase the cube's acceleration
+            ay = 0.1;
+        }
+        // check if the left arrow is pressed
+        if (keys[37]) {
+            // increase the cube's angular acceleration
+            angularAcceleration = -0.1;
+        }
+        // check if the right arrow is pressed
+        if (keys[39]) {
+            // increase the cube's angular acceleration
+            angularAcceleration = 0.1;
+        }
+    }
+    // array to keep track of which keys are pressed
+    var keys = [];
+    // function to handle keydown events
+    function keydown(event) {
+        // add the key to the keys array
+        keys[event.keyCode] = true;
+    }
+    // function to handle keyup events
+    function keyup(event) {
+        // remove the key from the keys array
+        keys[event.keyCode] = false;
+    }
+    // add event listeners for keydown and keyup events
+    document.addEventListener('keydown', keydown);
+    document.addEventListener('keyup', keyup);
+    // start the game loop
+    setInterval(function() {
+        updateAcceleration();
+        updatePosition();
+    }, 1000 / 60);
+    </script>
+  </body>
+</html>
