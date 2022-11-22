@@ -187,9 +187,9 @@
         }
 
         function checkCollisions() {
-            console.log(enemies[i].x);
             for (var i = 0; i < enemies.length; i++) {
-                for (var j = 0; j < bullets.length; j++) {
+                for (var j = 0; j < bullets.length; j++) 
+                console.log(enemies[i].x);{
                     if (enemies[i].x < bullets[j].x + bullets[j].width &&
                         enemies[i].x + enemies[i].width > bullets[j].x &&
                         enemies[i].y < bullets[j].y + bullets[j].height &&
