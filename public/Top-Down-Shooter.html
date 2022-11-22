@@ -187,19 +187,21 @@
         }
 
         function checkCollisions() {
-            for (var i = 1; i < enemies.length; i++) {
+            for (var i = 0; i < enemies.length; i++) {
                 for (var j = 0; j < bullets.length; j++) {
                     console.log(i);
                     console.log(enemies[i].x);
-                    if (enemies[i].x < bullets[j].x + bullets[j].width &&
-                        enemies[i].x + enemies[i].width > bullets[j].x &&
-                        enemies[i].y < bullets[j].y + bullets[j].height &&
-                        enemies[i].y + enemies[i].height > bullets[j].y) {
-                        enemies.splice(i, 1);
-                        bullets.splice(j, 1);
-                        i--;
-                        j--;
-                    }
+                    if(i > 0){
+                        if (enemies[i].x < bullets[j].x + bullets[j].width &&
+                            enemies[i].x + enemies[i].width > bullets[j].x &&
+                            enemies[i].y < bullets[j].y + bullets[j].height &&
+                            enemies[i].y + enemies[i].height > bullets[j].y) {
+                            enemies.splice(i, 1);
+                            bullets.splice(j, 1);
+                            i--;
+                            j--;
+                        }
+                    } 
                 }
             }
         }
