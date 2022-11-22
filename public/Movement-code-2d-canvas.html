@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1> This code is code to move a square smoothly only using javascript Enjoy </h1>
+  <h2>Example</h2>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var cube = {
+            x: 0,
+            y: 0,
+            z: 0,
+            width: 10,
+            height: 10,
+            depth: 10,
+            color: "blue"
+        };
+
+        var keys = [];
+
+        var cubeSpeed = 1;
+
+        var cubeRotationSpeed = 1;
+
+        var cubeRotationX = 0;
+
+        var cubeRotationY = 0;
+
+        var cubeRotationZ = 0;
+
+
+        function drawCube() {
+            ctx.fillStyle = cube.color;
+            ctx.fillRect(cube.x, cube.y, cube.width, cube.height);
+        }
+
+        
+        function update() {
+            if (keys[87]) {
+                cube.y -= cubeSpeed;
+            }
+            if (keys[83]) {
+                cube.y += cubeSpeed;
+            }
+            if (keys[65]) {
+                cube.x -= cubeSpeed;
+            }
+            if (keys[68]) {
+                cube.x += cubeSpeed;
+            }
+            if (keys[81]) {
+                cube.z -= cubeSpeed;
+            }
+            if (keys[69]) {
+                cube.z += cubeSpeed;
+            }
+            if (keys[37]) {
+                cubeRotationY -= cubeRotationSpeed;
+            }
+            if (keys[39]) {
+                cubeRotationY += cubeRotationSpeed;
+            }
+            if (keys[38]) {
+                cubeRotationX -= cubeRotationSpeed;
+            }
+            if (keys[40]) {
+                cubeRotationX += cubeRotationSpeed;
+            }
+            if (keys[90]) {
+                cubeRotationZ -= cubeRotationSpeed;
+            }
+            if (keys[67]) {
+                cubeRotationZ += cubeRotationSpeed;
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawCube();
+        }
+
+        function loop() {
+            update();
+            draw();
+            requestAnimationFrame(loop);
+        }
+
+        document.addEventListener("keydown", function (event) {
+            keys[event.keyCode] = true;
+        });
+
+        document.addEventListener("keyup", function (event) {
+            keys[event.keyCode] = false;
+        });
+
+        loop();
+
+
+    </script>
+</body>
