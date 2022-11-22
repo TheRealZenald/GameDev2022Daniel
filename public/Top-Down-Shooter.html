@@ -192,10 +192,10 @@
                     if (enemies[i].x < bullets[j].x + bullets[j].width &&
                         enemies[i].x + enemies[i].width > bullets[j].x &&
                         enemies[i].y < bullets[j].y + bullets[j].height &&
-                        enemies[i].y + enemies[i].height > bullets[j].y) {
+                        enemies[i].y + enemies[i].height > bullets[j].y) 
+                    console.log(enemies[i].x);{
                         enemies.splice(i, 1);
                         bullets.splice(j, 1);
-                        console.log(enemies[i].x);
                         i--;
                         j--;
                     }
