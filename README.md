@@ -5,3 +5,5 @@ https://therealzenald.github.io/gamedev2022daniel/public/
 
 
 ![mr ellise long](https://user-images.githubusercontent.com/101647451/197572490-a8bdfe0f-7408-4734-b7f6-cf9640393bb6.png)
+
+https://therealzenald.github.io/gamedev2022daniel/public/mmo-daniel/mmo-index.html
