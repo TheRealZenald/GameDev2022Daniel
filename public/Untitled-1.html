@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Game</title>
+        <style>
+            #canvas {
+                border: 1px solid black;
+            }
+        </style>
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        // car game with rotation and and you can drive on the floor
+        // you can't drive off the page
+        // the car is represented by a square
+        // controls are w,a,s,d
+        // car must drive on a road and if not on the road then you will lose
+        // the road is represented by a line
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var x = 250;
+        var y = 250;
+        var width = 50;
+        var height = 50;
+        var rotation = 0;
+        var speed = 0;
+        var acceleration = 1;
+        var friction = 0.9;
+        var turnSpeed = 0.1;
+        
+        var keys = [];
+
+        document.addEventListener("keydown", function(e) {
+            keys[e.keyCode] = true;
+        });
+
+        document.addEventListener("keyup", function(e) {
+            keys[e.keyCode] = false;
+        });
+
+        function update() {
+            if (keys[87]) {
+                speed += acceleration;
+            }
+            if (keys[83]) {
+                speed -= acceleration;
+            }
+            if (keys[65]) {
+                rotation -= turnSpeed;
+            }
+            if (keys[68]) {
+                rotation += turnSpeed;
+            }
+
+            speed *= friction;
+
+            x += Math.cos(rotation) * speed;
+            y += Math.sin(rotation) * speed;
+
+            if (x > 500) {
+                x = 0;
+            }
+            if (x < 0) {
+                x = 500;
+            }
+            if (y > 500) {
+                y = 0;
+            }
+            if (y < 0) {
+                y = 500;
+            }
+
+            ctx.clearRect(0, 0, 500, 500);
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rotation);
+            ctx.fillRect(-width / 2, -height / 2, width, height);
+            ctx.restore();
+
+            requestAnimationFrame(update);
+        }
+
+        var road = {
+            x: 250,
+            y: 250,
+            width: 100,
+            height: 100,
+            rotation: 0
+        }
+
+        function drawRoad() {
+            ctx.save();
+            ctx.translate(road.x, road.y);
+            ctx.rotate(road.rotation);
+            ctx.fillRect(-road.width / 2, -road.height / 2, road.width, road.height);
+            ctx.restore();
+        }
+
+        function draw() {
+            drawRoad();
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+
+        update();
+
+    </script>
