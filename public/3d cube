@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>3d cube</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("renderCanvas");
+    var engine = new BABYLON.Engine(canvas, true);
+
+    var createScene = function () {
+        var scene = new BABYLON.Scene(engine);
+        scene.clearColor = new BABYLON.Color3(0, 0, 0);
+
+        var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, BABYLON.Vector3.Zero(), scene);
+        camera.setPosition(new BABYLON.Vector3(0, 0, -10));
+        camera.attachControl(canvas, true);
+
+        var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+        light.intensity = 0.7;
+
+        var box = BABYLON.MeshBuilder.CreateBox("box", {size: 2}, scene);
+        box.position.y = 1;
+
+        var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
+
+        return scene;
+    };
+
+    var scene = createScene();
+
+    engine.runRenderLoop(function () {
+        scene.render();
+    });
+
+    window.addEventListener("resize", function () {
+        engine.resize();
+    });
+</script>
+<br> 
+<br>
+<h1>Scroll wheel to zoom in and out, Left click to rotate, Right click to move camera around 
+</html>
