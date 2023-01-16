@@ -1,0 +1,535 @@
+<h1 align="center">Dan's Awesome Web page for like my local storage</h1>
+
+<h1 id="Name"></h1> <br> <br>
+
+<h2 id="instructions"></h2>
+
+<script>
+    //asking user for name and storing it in local storage then displaying it on the page and will say"Howdy" to the user
+    var name = prompt("What is your name?");
+    localStorage.setItem("name", name);
+    //display name using innerHTML a header tag
+    document.getElementById("Name").innerHTML = "Howdy " + name + "!";
+</script>
+
+<script>
+
+
+
+var pin = []
+
+
+function pushPin1(){
+    pin.push(1);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+
+    if (pin.length == 4) {
+    
+    savePin();
+    }
+}
+
+
+
+
+function pushPin2(){
+    pin.push(2);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin3(){
+    pin.push(3);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin4(){
+    pin.push(4);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+     if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin5(){
+    pin.push(5);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin6(){
+    pin.push(6);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin7(){
+    pin.push(7);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red"; 
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin8(){
+    pin.push(8);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin9(){
+    pin.push(9);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    document.getElementById("pin").style.color = "red";
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function pushPin0(){
+    pin.push(0);
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+function clearPin(){
+    pin = [];
+
+    document.getElementById("pin").innerHTML = pin;
+    if (pin.length == 4) {
+    
+    savePin();
+    
+    }
+}
+
+
+
+
+var pin2 = []
+function pushUserPin0(){
+    pin2.push(0);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin1(){
+    pin2.push(1);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin2(){
+    pin2.push(2);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin3(){
+    pin2.push(3);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin4(){
+    pin2.push(4);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin5(){
+    pin2.push(5);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin6(){
+    pin2.push(6);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+   
+    }
+}
+
+function pushUserPin7(){
+    pin2.push(7);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin8(){
+    pin2.push(8);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+function pushUserPin9(){
+    pin2.push(9);
+    document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    if (pin2.length == 4) {
+    
+    
+    //disable table 
+
+    
+    }
+}
+
+
+//if the stored pin and the user pin are the same then the user is allowed to access the page
+function checkPin(){
+    var storedPin = localStorage.getItem("myStoredPin");
+    var userPin = pin2;
+    if (storedPin == userPin) {
+        alert("Access Granted");
+        window.location.href = "https://www.youtube.com/watch?v=6WlI24rv__g";
+    } else {
+        alert("Access Denied");
+        pin2 = [];
+        document.getElementById("pin2").innerHTML = "You entered: " + pin2;
+    }
+}
+
+function clearUserPin(){
+    pin2 = [];
+    document.getElementById("pin2").innerHTML = "You entered: " +   pin2;
+}
+
+//display the stored pin 
+function displayPin(){
+    var storedPin = localStorage.getItem("myStoredPin");
+    document.getElementById("savedPin").innerHTML = "Your pin is: " + storedPin;
+
+    if(storedPin == "" || storedPin == null){
+        document.getElementById("savedPin").innerHTML = "No Pin Stored";
+    }
+}
+
+function clearPin(){
+    localStorage.removeItem("myStoredPin");
+    document.getElementById("savedPin").innerHTML = "No Pin Stored";
+    //reload page 
+    location.reload();
+    
+    
+    
+}
+
+function savePin (){
+    localStorage.setItem("myStoredPin", pin);
+    document.getElementById("pin").innerHTML = "Your pin is: "  + pin;
+    document.getElementById("pin").style.color = "green";
+    document.getElementById("createPin").style.display = "none";
+    
+    document.getElementById("login").style.display = "inline-block";
+    //reload page 
+    location.reload();
+
+   
+}
+
+//if there is a stored pin then the user can login
+function login(){
+    var storedPin = localStorage.getItem("myStoredPin");
+    if(storedPin == "" || storedPin == null){
+        alert("No Pin Stored");
+        document.getElementById("instructions").innerHTML = "Please create a 4 digit pin";
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("retry").style.display = "none";
+        document.getElementById("resetPin").style.display = "none";
+        document.getElementById("pin2").style.display = "none";
+        document.getElementById("showHide").style.display = "none";
+    } else {
+        document.getElementById("createPin").style.display = "none";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("pin").style.display = "none";
+        document.getElementById("login").style.display = "inline-block";
+        document.getElementById("instructions").innerHTML = "Please enter your pin";
+        document.getElementById("clearCreatedPin").style.display = "none";
+    
+    }
+    document.getElementById("buttonContainer").style.display = "inline-block";
+}
+
+function clearCreatedPin(){
+    pin = [];
+    document.getElementById("pin").innerHTML = "Your pin is: " + pin;
+
+}
+
+//function to show or hide the pin
+function toggleView(){
+    if(document.getElementById("savedPin").style.display == "none"){
+        document.getElementById("savedPin").style.display = "block";
+    } else {
+        document.getElementById("savedPin").style.display = "none";
+    }
+}
+
+function displayContainer(){
+    //if there is a stored pin, display element ID "buttonContainer"
+    //if there is no stored pin, don't display element ID "buttonContainer"
+    var storedPin = localStorage.getItem("myStoredPin");
+    if(storedPin == "" || storedPin == null){
+        document.getElementById("buttonContainer").style.display = "none";
+        document.getElementById("login").style.display = "none";
+    } else {
+        document.getElementById("buttonContainer").style.display = "inline-block";
+    }
+}
+</script>
+<body onload="login(), displayPin(), displayContainer()">
+
+     
+<br>
+    <p id="savedPin"></p> <br>
+    <input type="button" id="clearCreatedPin" value="Clear Input" onclick="clearCreatedPin()"> <br> 
+
+    <h3 id="pin">Your Pin Is: </h3><br> 
+<table id="createPin">
+    <tr>
+        <td id="createPin"><button onclick="pushPin1()">1</button></td>
+        <td id="createPin"><button onclick="pushPin2()">2</button></td>
+        <td id="createPin"><button onclick="pushPin3()">3</button></td>
+    </tr>
+    <tr>
+        <td id="createPin"><button onclick="pushPin4()">4</button></td>
+        <td id="createPin"><button onclick="pushPin5()">5</button></td>
+        <td id="createPin"><button onclick="pushPin6()">6</button></td>
+    </tr>
+    <tr>
+        <td id="createPin"><button onclick="pushPin7()">7</button></td>
+        <td id="createPin"><button onclick="pushPin8()">8</button></td> 
+        <td id="createPin"><button onclick="pushPin9()">9</button></td>
+    </tr>
+    
+       
+        
+        
+</table>
+
+
+<div id="centerContainer">
+    
+<table id="buttonContainer">
+    <tr>
+        <td id=""><button id="retry" onclick="clearUserPin()">Retry <br> Pin</button></td>
+        <td id=""> <button id="showHide" onclick="toggleView()">Show/Hide <BR>  Pin</button></td>
+    </tr>
+
+    <tr>
+        <td id=""><button id="resetPin" onclick="clearPin()">RESET <br> Pin</button></td>
+        <td id="loginBtn"><button id="loginBtn" onclick="checkPin()">Click To <br> Login</button></td> 
+
+    </tr>
+    
+</table>
+<br>
+
+<p id="pin2">You Entered: </p> <br> <br> 
+<table id="login"> 
+    <tr>
+        <td id="createPin2"><button onclick="pushUserPin1()">1</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin2()">2</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin3()">3</button></td id="createPin">
+    </tr>
+    <tr>
+        <td id="createPin2"><button onclick="pushUserPin4()">4</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin5()">5</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin6()">6</button></td id="createPin">
+    </tr>
+    <tr>
+        <td id="createPin2"><button onclick="pushUserPin7()">7</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin8()">8</button></td id="createPin">
+        <td id="createPin2"><button onclick="pushUserPin9()">9</button></td id="createPin">
+    </tr>
+</table>
+
+
+</div>
+
+   
+
+
+
+
+
+
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+#buttonContainer{
+    display: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd; /* light gray */
+
+}
+
+h1, h2, h3, #pin, #savedPin, #pin2 {
+    display: inline-block;
+    background-color: #dddddd; /* light gray */
+    color: #333333; /* dark gray */
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    border: 2px solid #0099cc; /* light blue */
+}
+
+h1:hover, h2:hover, h3:hover {
+    background-color: #eeeeee; /* lighter gray */
+    color: #0099cc; /* light blue */
+}
+
+table {
+    display: inline-block;
+    background-color: #eeeeee; /* light gray */
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s;
+    border: 2px solid #9933cc; /* purple */
+}
+
+table:hover {
+    background-color: #ffffff; /* white */
+}
+
+td {
+    padding: 5px 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #cccccc; /* light gray */
+    border-radius: 5px;
+    background-color: #eeeeee; /* light gray */
+    color: #333333; /* dark gray */
+    font-size: 16px;
+    transition: all 0.5s;
+    background-color: #cccccc;
+}
+
+button:hover {
+    background-color: #dddddd
+}
+
+button:active {
+    background-color: #cccccc;
+}
+
+#loginBtn{
+    background-color:#cccccc;
+    border: none;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+#loginBtn:hover{
+    background-color: #dddddd;
+    border: 4px solid purple;
+}
+
+</style>
+</body>
